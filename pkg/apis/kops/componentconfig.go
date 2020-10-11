@@ -479,7 +479,7 @@ type KubeAPIServerConfig struct {
 	AuditDynamicConfiguration *bool `json:"auditDynamicConfiguration,omitempty" flag:"audit-dynamic-configuration"`
 
 	// EnableProfiling enables profiling via web interface host:port/debug/pprof/
-	EnableProfiling *bool `json:"enableProfiling,omitempty" flag:"profiling"`
+	EnableProfiling *bool `json:"enableProfiling,omitempty" flag:"profiling" flag-empty:"false"`
 
 	// CorsAllowedOrigins is a list of origins for CORS. An allowed origin can be a regular
 	// expression to support subdomain matching. If this list is empty CORS will not be enabled.
@@ -598,7 +598,7 @@ type KubeControllerManagerConfig struct {
 	AuthorizationAlwaysAllowPaths []string `json:"authorizationAlwaysAllowPaths,omitempty" flag:"authorization-always-allow-paths"`
 
 	// EnableProfiling enables profiling via web interface host:port/debug/pprof/
-	EnableProfiling *bool `json:"enableProfiling,omitempty" flag:"profiling"`
+	EnableProfiling *bool `json:"enableProfiling,omitempty" flag:"profiling" flag-empty:"false"`
 }
 
 // CloudControllerManagerConfig is the configuration of the cloud controller
@@ -659,7 +659,7 @@ type KubeSchedulerConfig struct {
 	AuthorizationAlwaysAllowPaths []string `json:"authorizationAlwaysAllowPaths,omitempty" flag:"authorization-always-allow-paths"`
 
 	// EnableProfiling enables profiling via web interface host:port/debug/pprof/
-	EnableProfiling *bool `json:"enableProfiling,omitempty" flag:"profiling"`
+	EnableProfiling *bool `json:"enableProfiling,omitempty" flag:"profiling" flag-empty:"false"`
 }
 
 // LeaderElectionConfiguration defines the configuration of leader election
